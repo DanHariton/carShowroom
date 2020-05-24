@@ -14,4 +14,12 @@ class PageController extends AbstractController
     {
         return $this->render('page/action/index.html.twig');
     }
+
+    /**
+     * @Route("/detail-car", name="page_detail_car")
+     */
+    public function detailCarAction()
+    {
+        return $this->render('page/action/detailCar');
+    }
 }
