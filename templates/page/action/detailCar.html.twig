@@ -3,5 +3,68 @@
 {% block title %}Index Page{% endblock %}
 
 {% block body %}
-    
+    <div id="about-car">
+        <div class="lef-side">
+            <div class="car-photos">
+                <img id="preview-photo" src="{{ asset('assets/page/img/lexus-car-crop.jpg') }}" alt="lexus car">
+                <div class="smallest-photo-car">
+                    <div class="container-level-photo">
+                        <img class="preview-photo-small" src="{{ asset('assets/page/img/lexus-car-crop.jpg') }}" alt="lexus car">
+                        <img class="preview-photo-small" src="{{ asset('assets/page/img/lexus-car-crop.jpg') }}" alt="lexus car">
+                        <img class="preview-photo-small" src="{{ asset('assets/page/img/lexus-car-crop.jpg') }}" alt="lexus car">
+                        <img class="preview-photo-small" src="{{ asset('assets/page/img/lexus-car-crop.jpg') }}" alt="lexus car">
+                    </div>
+                    <div class="container-level-photo">
+                        <img class="preview-photo-small" src="{{ asset('assets/page/img/lexus-car-crop.jpg') }}" alt="lexus car">
+                        <img class="preview-photo-small" src="{{ asset('assets/page/img/lexus-car-crop.jpg') }}" alt="lexus car">
+                        <img class="preview-photo-small" src="{{ asset('assets/page/img/lexus-car-crop.jpg') }}" alt="lexus car">
+                        <img class="preview-photo-small" src="{{ asset('assets/page/img/lexus-car-crop.jpg') }}" alt="lexus car">
+                    </div>
+                </div>
+            </div>
+            <div class="mark-car">
+                <p>Poznámka: <strong>Komise 815011</strong></p>
+            </div>
+            <div class="social-car">
+                <h2>Sdílejte tento vůz:</h2>
+                <div class="social-networks">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="far fa-envelope"></i>
+                </div>
+                <a href="/">Zkopírovat odkaz na vůz</a>
+            </div>
+            <div class="why-autoeder">
+                <h2>Proč vozy od AutoEder?</h2>
+                <ul>
+                    <li>možnost výměny stávajícího vozu za nový</li>
+                    <li>možnost výměny stávajícího vozu za nový</li>
+                    <li>vaše mimořádná spokojenost je naší mimořádnou prioritou</li>
+                </ul>
+            </div>
+            <div class="feedback-user-car">
+                <h2>Reference našich zákazníků:</h2>
+                <p class="comment-user">
+                    „Byl jsem velmi příjemně potěšen přístupem slečny prodejkyně.“
+                </p>
+                <p class="user">Jaroslav K., Klatovy</p>
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="container-right-side">
+                <p class="detail-manufakrura-car">Lexus</p>
+                <h1 class="detail-model-car">CT 200h HYBRID</h1>
+                <div class="detail-price">
+                    <p>Vůz je dostupný hned</p>
+                    <p>228 000 Kč</p>
+                </div>
+                <div class="detail-discount">
+                    <p>(možný odpočet DPH)</p>
+                    <p>Původní cena: 277 600 Kč</p>
+                    <p>Ušetříte až 35 700 Kč</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
 {% endblock %}

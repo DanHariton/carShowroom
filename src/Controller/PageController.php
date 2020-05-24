@@ -20,6 +20,6 @@ class PageController extends AbstractController
      */
     public function detailCarAction()
     {
-        return $this->render('page/action/detailCar');
+        return $this->render('page/action/detailCar.html.twig');
     }
 }
