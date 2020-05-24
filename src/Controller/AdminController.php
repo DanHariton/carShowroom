@@ -15,6 +15,24 @@ class AdminController extends AbstractController
      */
     public function indexAction()
     {
-        return $this->render('admin/layout.nav.html.twig');
+        return $this->render('admin/action/index.html.twig');
+    }
+
+    /**
+     * @Route("/car/add", name="admin_car_add")
+     */
+    public function carAddAction()
+    {
+//        $this->createForm()
+
+        return $this->render('admin/action/car_add.html.twig');
+    }
+
+    /**
+     * @Route("/car/list", name="admin_car_list")
+     */
+    public function carListAction()
+    {
+        return $this->render('admin/action/car_list.html.twig');
     }
 }
