@@ -3,46 +3,76 @@
 {% block title %}Index Page{% endblock %}
 
 {% block body %}
-    <div id="banner-block">
-        <img src="{{ asset('assets/page/img/skladove-vozy.png') }}" alt="skladove vozy">
-    </div>
-    <div class="car-models container-custom">
-        <h1>Skladové vozy</h1>
-        <div class="car-links">
-            <a class="toyota-cars model-link" href="/">
-                <img src="{{ asset('assets/page/img/toyota-logo.png') }}" alt="toyota logo">
-                <p>Vozy Toyota (165 vozů)</p>
-            </a>
-            <a class="lexus-cars model-link" href="/">
-                <img src="{{ asset('assets/page/img/lexus-logo.png') }}" alt="lexus logo">
-                <p>Vozy Lexus (265 vozů)</p>
-            </a>
-            <a class="other-cars model-link" href="/">
-                <i class="fa fa-car" aria-hidden="true"></i>
-                <p>Ostatní vozy (1 265 vozů)</p>
-            </a>
-        </div>
-    </div>
-    <div class="container-custom searching-params-block">
-        <form class="search-car-form">
-            <div class="container-form-params">
-                <div class="searching-params-forms">
+    <div class="container main-container">
+        <header class="margin-bottom-75">
+            <img src="{{ asset('assets/page/img/skladove-vozy.png') }}" alt="skladove vozy">
+        </header>
+
+        <section id="manufacture" class="text-center margin-bottom-75">
+            <h1 class="margin-bottom-30">Skladové vozy</h1>
+
+            <div class="row">
+                <div class="col-12 col-sm-4">
+                    <a class="model-link" href="{{ path('page_index') }}">
+                        <img src="{{ asset('assets/page/img/lexus-logo.png') }}" alt="lexus logo" class="img-fluid">
+                        <p>Vozy Toyota (165 vozů)</p>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <a class="model-link" href="{{ path('page_index') }}">
+                        <img src="{{ asset('assets/page/img/lexus-logo.png') }}" alt="lexus logo" class="img-fluid">
+                        <p>Vozy Lexus (265 vozů)</p>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <a class="model-link" href="{{ path('page_index') }}">
+                        <img src="{{ asset('assets/page/img/lexus-logo.png') }}" alt="lexus logo" class="img-fluid">
+                        <p>Ostatní vozy (1 265 vozů)</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <form id="search" class="margin-bottom-75">
+            <div class="row">
+                <div class="col-12 col-sm-4">
                     <div class="form-group">
-                        <select class="form-control searching-selector select2" id="select-manufatkura">
+                        <select class="form-control searching-selector select2">
                             <option>Značka</option>
                             <option>Toyota</option>
                             <option>Lexus</option>
                         </select>
                     </div>
+                </div>
+                <div class="col-12 col-sm-4">
                     <div class="form-group">
-                        <select class="form-control searching-selector" id="select-fuel">
+                        <select class="form-control searching-selector">
+                            <option>Model</option>
+                            <option>CT 200h HYBRID</option>
+                            <option>Lexus GS F</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <div class="text-right" style="margin-bottom: 1rem; cursor: pointer;">
+                        <div id="search-more-params" @click="expanded = !expanded" style="line-height: 38px">
+                            Rozšířené vyhledávání <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row expanded-search" :class="{'visible': expanded}">
+                <div class="col-12 col-sm-4">
+                    <div class="form-group">
+                        <select class="form-control searching-selector">
                             <option>Palivo</option>
                             <option>Benzin</option>
                             <option>Disel</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <select class="form-control searching-selector" id="select-year">
+                        <select class="form-control searching-selector">
                             <option>Rok uvedení do provozu</option>
                             <option>2020</option>
                             <option>2019</option>
@@ -51,175 +81,62 @@
                         </select>
                     </div>
                 </div>
-                <div class="searching-params-forms">
+                <div class="col-12 col-sm-4">
                     <div class="form-group">
-                        <select class="form-control searching-selector" id="select-model">
-                            <option>Model</option>
-                            <option>CT 200h HYBRID</option>
-                            <option>Lexus GS F</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <select class="form-control searching-selector" id="select-karosie">
+                        <select class="form-control searching-selector">
                             <option>Karosie</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <select class="form-control searching-selector" id="select-doors">
+                        <select class="form-control searching-selector">
                             <option>Počet dveří</option>
                             <option>5</option>
                             <option>3</option>
                         </select>
                     </div>
                 </div>
-                <div class="searching-params-forms">
+                <div class="col-12 col-sm-4">
                     <div class="form-group">
-                        <select class="form-control searching-selector" id="select-engine">
+                        <select class="form-control searching-selector">
                             <option>Objem motoru</option>
                             <option>100</option>
                             <option>200</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <select class="form-control searching-selector" id="select-color">
+                        <select class="form-control searching-selector">
                             <option>Barva</option>
                             <option>Aqua</option>
                             <option>Bronzová</option>
                         </select>
                     </div>
-                    <div class="search-more-params-container">
-                        <a id="search-more-params" href="/">Rozšířené vyhledávání <i class="fa fa-arrow-down" aria-hidden="true"></i></a>
-                    </div>
                 </div>
             </div>
-            <div class="submit-search-form">
-                <button type="submit" class="btn btn-primary mb-2 submit-search">Vyhledat vozy</button>
+            <div class="row">
+                <div class="col text-right">
+                    <button type="submit" class="btn btn-primary mb-2 submit-search">Vyhledat vozy</button>
+                </div>
             </div>
         </form>
-    </div>
-    <div class="searching-cars container-custom">
-        <div class="searching-level">
-            <div class="searching-car">
-                <img src="{{ asset('assets/page/img/lexus-car.jpg') }}" alt="lexus">
-                <div class="about-car">
-                    <p class="car-model">CT 200h HYBRID</p>
-                    <p class="car-price">285 000 Kč</p>
-                </div>
-                <div class="car-manufaktura">
-                    <p>Lexus</p>
-                </div>
-                <div class="link-car">
-                    <a href="/">Detail vozu</a>
-                </div>
+
+        <section id="items">
+            <div class="row">
+                {% for i in 1..12 %}
+                    <div class="col-12 col-sm-6 col col-md-4">
+                        <img src="{{ asset('assets/page/img/lexus-car.jpg') }}" alt="lexus" class="img-fluid">
+                        <div class="about-car">
+                            <p class="car-model">CT 200h HYBRID</p>
+                            <p class="car-price">285 000 Kč</p>
+                        </div>
+                        <div class="car-manufaktura">
+                            <p>Lexus</p>
+                        </div>
+                        <div class="link-car">
+                            <a href="/">Detail vozu</a>
+                        </div>
+                    </div>
+                {% endfor %}
             </div>
-            <div class="searching-car">
-                <img src="{{ asset('assets/page/img/lexus-car.jpg') }}" alt="lexus">
-                <div class="about-car">
-                    <p class="car-model">CT 200h HYBRID</p>
-                    <p class="car-price">285 000 Kč</p>
-                </div>
-                <div class="car-manufaktura">
-                    <p>Lexus</p>
-                </div>
-                <div class="link-car">
-                    <a href="/">Detail vozu</a>
-                </div>
-            </div>
-            <div class="searching-car">
-                <img src="{{ asset('assets/page/img/lexus-car.jpg') }}" alt="lexus">
-                <div class="about-car">
-                    <p class="car-model">CT 200h HYBRID</p>
-                    <p class="car-price">285 000 Kč</p>
-                </div>
-                <div class="car-manufaktura">
-                    <p>Lexus</p>
-                </div>
-                <div class="link-car">
-                    <a href="/">Detail vozu</a>
-                </div>
-            </div>
-        </div>
-        <div class="searching-level">
-            <div class="searching-car">
-                <img src="{{ asset('assets/page/img/lexus-car.jpg') }}" alt="lexus">
-                <div class="about-car">
-                    <p class="car-model">CT 200h HYBRID</p>
-                    <p class="car-price">285 000 Kč</p>
-                </div>
-                <div class="car-manufaktura">
-                    <p>Lexus</p>
-                </div>
-                <div class="link-car">
-                    <a href="/">Detail vozu</a>
-                </div>
-            </div>
-            <div class="searching-car">
-                <img src="{{ asset('assets/page/img/lexus-car.jpg') }}" alt="lexus">
-                <div class="about-car">
-                    <p class="car-model">CT 200h HYBRID</p>
-                    <p class="car-price">285 000 Kč</p>
-                </div>
-                <div class="car-manufaktura">
-                    <p>Lexus</p>
-                </div>
-                <div class="link-car">
-                    <a href="/">Detail vozu</a>
-                </div>
-            </div>
-            <div class="searching-car">
-                <img src="{{ asset('assets/page/img/lexus-car.jpg') }}" alt="lexus">
-                <div class="about-car">
-                    <p class="car-model">CT 200h HYBRID</p>
-                    <p class="car-price">285 000 Kč</p>
-                </div>
-                <div class="car-manufaktura">
-                    <p>Lexus</p>
-                </div>
-                <div class="link-car">
-                    <a href="/">Detail vozu</a>
-                </div>
-            </div>
-        </div>
-        <div class="searching-level">
-            <div class="searching-car">
-                <img src="{{ asset('assets/page/img/lexus-car.jpg') }}" alt="lexus">
-                <div class="about-car">
-                    <p class="car-model">CT 200h HYBRID</p>
-                    <p class="car-price">285 000 Kč</p>
-                </div>
-                <div class="car-manufaktura">
-                    <p>Lexus</p>
-                </div>
-                <div class="link-car">
-                    <a href="/">Detail vozu</a>
-                </div>
-            </div>
-            <div class="searching-car">
-                <img src="{{ asset('assets/page/img/lexus-car.jpg') }}" alt="lexus">
-                <div class="about-car">
-                    <p class="car-model">CT 200h HYBRID</p>
-                    <p class="car-price">285 000 Kč</p>
-                </div>
-                <div class="car-manufaktura">
-                    <p>Lexus</p>
-                </div>
-                <div class="link-car">
-                    <a href="/">Detail vozu</a>
-                </div>
-            </div>
-            <div class="searching-car">
-                <img src="{{ asset('assets/page/img/lexus-car.jpg') }}" alt="lexus">
-                <div class="about-car">
-                    <p class="car-model">CT 200h HYBRID</p>
-                    <p class="car-price">285 000 Kč</p>
-                </div>
-                <div class="car-manufaktura">
-                    <p>Lexus</p>
-                </div>
-                <div class="link-car">
-                    <a href="/">Detail vozu</a>
-                </div>
-            </div>
-        </div>
+        </section>
     </div>
 {% endblock %}

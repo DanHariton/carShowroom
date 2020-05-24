@@ -14,6 +14,7 @@
 
 body
   font-family MonseratRegular
+  color #282828
 
 #banner-block
   img
@@ -33,20 +34,15 @@ body
   justify-content space-around
 
 .model-link
-  width 30%
-  display flex
-  flex-direction column
-  justify-content space-between
-  align-items center
-  color #000
-  text-decoration none
-  img
-    width 300px
-
-
-.model-link:hover
   text-decoration underline
-  color #e30613
+  color #282828
+  font-size 20px
+  &:hover
+    color #e30613
+  img
+    max-width 65%
+    margin auto
+
 
 .toyota-cars
   img
@@ -62,44 +58,37 @@ body
   justify-content space-between
   margin-bottom 60px
 
-.searching-car
-  width 30%
-  display flex
-  flex-direction column
-  align-items center
+#items
   .about-car
     margin-top 10px
     display flex
     justify-content space-between
-    width 85%
     font-weight bold
     cursor default
   .car-manufaktura
-    width 85%
     cursor default
     font-size 15px
     p
       margin 0
   .link-car
-    width 85%
     display flex
     flex-direction row
     justify-content flex-end
     margin-top 12px
+    padding-bottom 50px
+    @media (max-width 768px)
+      padding-bottom 25px
     a
       padding 17px 60px
       font-size 15px
-      background-color #e30613
-      color #ffffff
       text-decoration none
+      color #ffffff
+      transition background-color 0.4s
+      background-color #e30613
       border 1px solid #e30613
-    a:hover
-      color #e30613
-      background-color #ffffff
-      border 1px solid #e30613
-      font-weight bold
-  img
-    width 85%
+      &:hover
+        background-color #c40611
+        border 1px solid #c40611
 
 .searching-params-block
   margin-bottom 60px !important
@@ -119,26 +108,28 @@ body
     flex-direction row
     justify-content flex-end
     width 98.4%
-    button
-      margin-top 20px
-      color #ffffff
-      background-color #e30613
-      border 1px solid #e30613
-      border-radius 0
-      padding 15px 60px
-    button:hover
-      color #e30613
-      background-color #ffffff
-      text-decoration underline
   .searching-params-forms
     width 30%
     .search-more-params-container
       display flex
       justify-content flex-end
-      #search-more-params
-        color #000
-        text-decoration underline
-        margin 8px 0
+
+.submit-search
+  margin-top 20px
+  color #ffffff
+  background-color #e30613
+  border 1px solid #e30613
+  border-radius 0
+  padding 15px 60px
+  transition background-color 0.4s
+  text-decoration none
+  &:hover
+    background-color #c40611
+    border 1px solid #c40611
+
+#search-more-params
+  color #000
+  text-decoration underline
 
 .container-custom
   width 85%
@@ -155,3 +146,33 @@ body
     .select2-selection
       box-shadow none !important
       border-color #000 !important
+
+.select2-container--bootstrap4 .select2-selection--single .select2-selection__arrow b
+  border-width 8px 7px 0 7px
+  margin-left -12px
+  margin-top -4px
+
+header img
+  width 100%
+  height auto
+
+@media (min-width: 1200px)
+  .main-container
+    max-width 1500px
+
+.margin-bottom-30
+  margin-bottom 30px
+
+.margin-bottom-50
+  margin-bottom 50px
+
+.margin-bottom-75
+  margin-bottom 75px
+
+.expanded-search
+  max-height 0
+  overflow hidden
+  transition max-height 0.5s ease-in-out
+
+.expanded-search.visible
+  max-height 400px
