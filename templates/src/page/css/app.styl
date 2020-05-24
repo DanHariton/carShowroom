@@ -24,6 +24,12 @@ body
   img
     width 100%
 
+#manufacture
+  h1
+    font-family MonseratBold
+    letter-spacing 3px
+    color: #282828;
+
 .car-models
   margin-bottom 60px !important
   h1
@@ -41,10 +47,12 @@ body
   text-decoration underline
   color #282828
   font-size 20px
+  p
+    font-size 18px
   &:hover
     color #e30613
   img
-    max-width 65%
+    max-width 50%
     margin auto
 
 
@@ -69,10 +77,21 @@ body
     justify-content space-between
     font-weight bold
     cursor default
+  .car-model
+    font-family MonseratBold
+    letter-spacing 1px
+    color #282828
+    margin-bottom 0
+  .car-price
+    font-family MonseratBold
+    letter-spacing 1px
+    color #282828
+    margin-bottom 0
   .car-manufaktura
     cursor default
     font-size 15px
     p
+      color #282828
       margin 0
   .link-car
     display flex
@@ -80,6 +99,10 @@ body
     justify-content flex-end
     margin-top 12px
     padding-bottom 50px
+    text-decoration underline
+    font-family MonseratBold
+    letter-spacing 2px
+    color #FFFFFF
     @media (max-width 768px)
       padding-bottom 25px
     a
@@ -93,6 +116,7 @@ body
       &:hover
         background-color #c40611
         border 1px solid #c40611
+        text-decoration underline
 
 .searching-params-block
   margin-bottom 60px !important
@@ -126,14 +150,19 @@ body
   border-radius 0
   padding 15px 60px
   transition background-color 0.4s
-  text-decoration none
+  text-decoration underline
+  letter-spacing 2px
+  font-family MonseratBold
   &:hover
     background-color #c40611
     border 1px solid #c40611
+    text-decoration underline
 
 #search-more-params
-  color #000
+  color #282828
+  font-family MonseratBold
   text-decoration underline
+  letter-spacing 1px
 
 .container-custom
   width 85%
@@ -142,14 +171,14 @@ body
 .select2-container--bootstrap4
   .select2-selection
     box-shadow none !important
-    border 2px solid #000 !important
+    border 2px solid #282828 !important
     border-radius 0
 
 .select2-container--bootstrap4
   .select2-container--focus
     .select2-selection
       box-shadow none !important
-      border-color #000 !important
+      border-color #282828 !important
 
 .select2-container--bootstrap4 .select2-selection--single .select2-selection__arrow b
   border-width 8px 7px 0 7px
@@ -170,8 +199,8 @@ header img
 .margin-bottom-50
   margin-bottom 50px
 
-.margin-bottom-75
-  margin-bottom 75px
+.margin-bottom-70
+  margin-bottom 70px
 
 .expanded-search
   max-height 0
@@ -408,4 +437,4 @@ header img
   .sale-contact
     margin-bottom 0
   .last-sale-contact
-    margin-bottom  20px
+    margin-bottom 20px
