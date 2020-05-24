@@ -1,0 +1,22 @@
+{% extends 'admin/layout.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        {% include 'admin/components/sidebar.html.twig' %}
+
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                {% include 'admin/components/topbar.html.twig' %}
+
+                <div class="container-fluid">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        {% block content %}{% endblock %}
+                    </div>
+                </div>
+            </div>
+            {% include 'admin/components/footer.html.twig' %}
+        </div>
+    </div>
+
+    {% include 'admin/components/modal_logout.html.twig' %}
+{% endblock %}
