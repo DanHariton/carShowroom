@@ -1,6 +1,132 @@
 @import "~startbootstrap-sb-admin-2/vendor/fontawesome-free/css/all.css"
 @import "~normalize.css/normalize.css"
+@import "~bootstrap/dist/css/bootstrap.css"
+@import '~select2/dist/css/select2.css'
+@import "~@ttskch/select2-bootstrap4-theme/dist/select2-bootstrap4.css"
+
+@font-face
+  font-family MonseratBold
+  src url("./font/Montserrat-Bold.otf")
+
+@font-face
+  font-family MonseratRegular
+  src url('./font/Montserrat-Regular.otf')
+
+body
+  font-family MonseratRegular
 
 #banner-block
   img
     width 100%
+
+.car-models
+  margin-bottom 60px !important
+  h1
+    font-weight bold
+    text-align center
+    margin-top 3%
+    font-size 37px
+
+.car-links
+  display flex
+  flex-direction row
+  justify-content space-around
+
+.model-link
+  width 30%
+  display flex
+  flex-direction column
+  justify-content space-between
+  align-items center
+  color #000
+  text-decoration none
+  img
+    width 300px
+
+
+.model-link:hover
+  text-decoration underline
+
+.toyota-cars
+  img
+    width 170px
+
+.other-cars
+  i
+    font-size 150px
+
+.searching-level
+  display flex
+  flex-direction row
+  justify-content space-between
+  margin-bottom 60px
+
+.searching-car
+  width 30%
+  display flex
+  flex-direction column
+  align-items center
+  .about-car
+    display flex
+    justify-content space-between
+    width 85%
+    font-weight: bold;
+    cursor default
+  .car-manufaktura
+    width 85%
+    cursor default
+    font-size 15px
+    p
+      margin 0
+  .link-car
+    width 85%
+    display flex
+    flex-direction row
+    justify-content flex-end
+    margin-top 12px
+    a
+      padding 17px 60px
+      font-size 15px
+      background-color #e30613
+      color #ffffff
+      text-decoration none
+      border 1px solid #e30613
+    a:hover
+      color #e30613
+      background-color #ffffff
+      border 1px solid #e30613
+      font-weight bold
+  img
+    width 85%
+
+.searching-params-block
+  margin-bottom 60px !important
+  .searching-selector
+    border 2px solid #000
+    color #000
+    border-radius 0
+    box-shadow none
+
+.search-car-form
+  .container-form-params
+    display flex
+    flex-direction row
+    justify-content space-around
+  .submit-search-form
+    display flex
+    flex-direction row
+    justify-content flex-end
+    width 98.4%
+  .searching-params-forms
+    width 30%
+    .search-more-params-container
+      display flex
+      justify-content flex-end
+      #search-more-params
+        color #000
+        text-decoration underline
+        margin 8px 0
+
+.container-custom
+  width 85%
+  margin auto
