@@ -3,5 +3,24 @@
 {% block title %}Index Page{% endblock %}
 
 {% block body %}
-    <h1>Hello World</h1>
+    <div id="banner-block">
+        <img src="{{ asset('assets/page/img/skladove-vozy.png') }}" alt="skladove vozy">
+    </div>
+    <div class="car-models">
+        <h1>Skladové vozy</h1>
+        <div class="car-links">
+            <a class="toyota model-link" href="/">
+                <img src="{{ asset('assets/page/img/toyota-logo.png') }}" alt="toyota logo">
+                <p>Vozy Toyota (165 vozů)</p>
+            </a>
+            <a class="lexus model-link" href="/">
+                <img src="{{ asset('assets/page/img/lexus-logo.png') }}" alt="lexus logo">
+                <p>Vozy Lexus (265 vozů)</p>
+            </a>
+            <a class="toyota model-link" href="/">
+                <i class="fa fa-car" aria-hidden="true"></i>
+                <p>Ostatní vozy (1 265 vozů)</p>
+            </a>
+        </div>
+    </div>
 {% endblock %}
