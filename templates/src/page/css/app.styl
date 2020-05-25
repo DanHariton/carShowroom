@@ -88,8 +88,14 @@ body
     color #282828
     margin-bottom 0
   .car-manufaktura
+    display flex
+    justify-content space-between
     cursor default
     font-size 15px
+    .car-price-discount
+      text-align end
+      p:last-child
+        font-family MonseratBold
     p
       color #282828
       margin 0
@@ -101,7 +107,6 @@ body
     padding-bottom 50px
     text-decoration underline
     font-family MonseratBold
-    letter-spacing 2px
     color #FFFFFF
     @media (max-width 768px)
       padding-bottom 25px
@@ -149,7 +154,7 @@ body
 .select2-container--bootstrap4
   .select2-results__option--highlighted
     .select2-results__option[aria-selected="true"]
-      background-color #e30613 !important
+      background-color #e30613 !importantcar-manufaktura
 
 .submit-search
   margin-top 20px
@@ -160,7 +165,6 @@ body
   padding 15px 60px
   transition background-color 0.4s
   text-decoration underline
-  letter-spacing 2px
   font-family MonseratBold
   &:hover
     background-color #c40611
@@ -224,8 +228,26 @@ header img
   display flex
   flex-direction row
 
+.link-back
+  width 80%
+  margin auto
+  display flex
+  font-size 15px
+  a
+    color #282828
+    opacity 70%
+    text-transform uppercase
+    letter-spacing: 1px;
+  a:hover
+    opacity 100%
+    text-decoration none
+  p
+    text-decoration underline
+    letter-spacing: 1px;
+    cursor default
+
 .lef-side
-  width 55%
+  width 57%
   .car-photos
     display flex
     flex-direction column
@@ -236,7 +258,7 @@ header img
       justify-content center
       align-items center
       width 80%
-      margin-top 25px
+      margin-top 15px
       .container-level-photo
         display flex
         flex-direction row
@@ -308,10 +330,10 @@ header img
     text-align end
 
 .right-side
-  width 45%
+  width 39%
 
 .container-right-side
-  width 80%
+  width 98%
 
 .detail-manufakrura-car
   margin 0
@@ -355,7 +377,8 @@ header img
 
 .detail-model-car
   font-family MonseratBold
-  margin-bottom 60px
+  margin-bottom 30px
+  font-weight 500
 
 .complect
   border-bottom 1px solid #282828
